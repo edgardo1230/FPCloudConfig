@@ -14,7 +14,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
   instance:
-    preferIpAddress: true
+#    preferIpAddress: true
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
       
