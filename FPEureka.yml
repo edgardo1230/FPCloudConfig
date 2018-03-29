@@ -16,9 +16,9 @@ eureka:
     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
      enableSelfPreservation: true
-     renewal-threshold-update-interval-ms = 15 * 60 * 1000
-     renewal-percent-threshold = 0.85
-     eviction-interval-timer-in-ms = 60 * 1000
+     renewal-threshold-update-interval-ms: 15 * 60 * 1000
+     renewal-percent-threshold: 0.85
+     eviction-interval-timer-in-ms: 60 * 1000
   instance:
-    lease-expiration-duration-in-seconds = 90
-    lease-renewal-interval-in-seconds = 30
+    lease-expiration-duration-in-seconds: 90
+    lease-renewal-interval-in-seconds: 30
