@@ -13,7 +13,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
   serviceUrl:
-    defaultZone: http://localhost:${server.port}/eureka/
+    defaultZone: http://localhost:1111/eureka/
   server:
      enableSelfPreservation: true
      renewal-threshold-update-interval-ms: 900000
