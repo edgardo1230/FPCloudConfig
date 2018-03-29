@@ -14,8 +14,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
   instance:
-    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
-
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
       
 # Increase the Hystrix timeout to 60s (globally)
 hystrix:
