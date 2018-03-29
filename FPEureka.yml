@@ -5,20 +5,21 @@ spring:
 
 #HTTP Server
 server: 
-  port: ${random.int[1024,65535]}
+  port: ${random.int[1024,1030]}
 
 #Eureka Configuration Properties
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-  serviceUrl:
-    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  serviceUrl:
+#    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
      enableSelfPreservation: true
      renewal-threshold-update-interval-ms: 900000
      renewal-percent-threshold: 0.85
      eviction-interval-timer-in-ms: 60000
   instance:
+    instance-id: ${spring.application.name}:${server.port}
     lease-expiration-duration-in-seconds: 90
     lease-renewal-interval-in-seconds: 30
