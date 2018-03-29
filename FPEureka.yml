@@ -5,7 +5,7 @@ spring:
 
 #HTTP Server
 server: 
-  port: ${PORT:8761}
+  port: ${random.int[1024,65535]}
 
 #Eureka Configuration Properties
 eureka:
