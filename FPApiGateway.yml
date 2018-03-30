@@ -6,7 +6,7 @@ spring:
 
 # HTTP Server
 server:
-  port: 8080   # HTTP port
+  port: 8181   # HTTP port
   
 # Discovery Server Access
 eureka:
