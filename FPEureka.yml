@@ -5,7 +5,7 @@ spring:
 
 #HTTP Server
 server: 
-  port: 9999
+  port: 1111
 
 eureka:
   instance:
