@@ -16,7 +16,7 @@ spring:
 
 # HTTP Server
 server:
-  port: 0
+  port: ${random.int[10000,65000]}
   
 # Discovery Server Access
 eureka:
@@ -35,3 +35,17 @@ jwt:
     authentication:
       path: auth
       refresh: refresh
+      
+
+  # Spring JDBC configuration
+  datasource:
+    url:      jdbc:mysql://127.0.0.1:3306/focalpoint-prod
+    rname: focalpoint
+    password: 123456
+
+  # Spring Data JPA configuration
+  jpa:
+    hibernate:
+      # To be updated in real production usage!
+      ddl-auto: none
+    show-sql: true
