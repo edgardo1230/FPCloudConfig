@@ -37,6 +37,6 @@ zuul:
       
     product-service:
       path: /admin-service/**
-      serviceId: ADMISTRATOR-SERVICE
+      serviceId: ADMINISTRATOR-SERVICE
       sensitiveHeaders: Cookie,Set-Cookie
       
