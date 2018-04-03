@@ -4,11 +4,11 @@ spring:
     name: admistrator-service
   # Spring JDBC configuration
   datasource:
-    url:      jdbc:mysql://127.0.0.1:3306/focalpoint-prod
-    data-username: focalpoint
-    username: focalpoint
-    data-password: 123456
-    password: 123456
+    url:      ${RDS_URL}
+    data-username: ${RDS_USERNAME}
+    username: ${RDS_USERNAME}
+    data-password: ${RDS_PASSWORD}
+    password: ${RDS_PASSWORD}
     driver-class-name: com.mysql.jdbc.Driver
 
   # Spring Data JPA configuration
