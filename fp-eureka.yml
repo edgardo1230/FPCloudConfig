@@ -1,7 +1,7 @@
 #Application Name
 spring:
   application:
-    name: FPEureka
+    name: fp-eureka
 
 #HTTP Server
 server: 
