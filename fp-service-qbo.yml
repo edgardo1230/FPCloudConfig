@@ -1,0 +1,44 @@
+# Spring properties
+spring:
+  application:
+    name: fp-service-qbo
+  # Spring JDBC configuration
+  datasource:
+    url:      ${RDS_URL}
+    data-username: ${RDS_USERNAME}
+    username: ${RDS_USERNAME}
+    data-password: ${RDS_PASSWORD}
+    password: ${RDS_PASSWORD}
+    driver-class-name: com.mysql.jdbc.Driver
+
+  # Spring Data JPA configuration
+  jpa:
+    hibernate:
+      # To be updated in real production usage!
+      ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+# HTTP Server
+server:
+    port: 0
+    
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.17.0.3:1111/eureka/
+      #defaultZone: ${eureka_url:http://eureka-server:8761/eureka/}
+  instance:
+    instance-id:  ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.int}}
+    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
+
+# Auth JWT
+jwt:
+  header: Authorization
+  secret: nearshore_secret
+  expiration: 172800 #seconds
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
