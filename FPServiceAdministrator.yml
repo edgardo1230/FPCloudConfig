@@ -1,7 +1,7 @@
 # Spring properties
 spring:
   application:
-    name: administrator-service
+    name: fp-service-admin
   # Spring JDBC configuration
   datasource:
     url:      ${RDS_URL}
@@ -27,7 +27,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://172.17.0.3:1111/eureka/
   instance:
     instance-id:  ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.int}}
     leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
