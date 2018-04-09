@@ -13,7 +13,9 @@ eureka:
     fetchRegistry: false
   server:
     enableSelfPreservation: false    
-    
+  instance:	
+    hostname: localhost	
+
 #Eureka Configuration Properties
 #eureka:
 #  client:
