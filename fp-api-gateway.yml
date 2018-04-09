@@ -1,7 +1,7 @@
 # Spring properties
 spring:
   application:
-    name: FPApiGateway  # Identify this application
+    name: fp-api-gateway  # Identify this application
 
 
 # HTTP Server
