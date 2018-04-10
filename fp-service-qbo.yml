@@ -27,7 +27,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.17.0.3:1111/eureka/
+      defaultZone: http://localhost:1111/eureka/
       #defaultZone: ${eureka_url:http://eureka-server:8761/eureka/}
   instance:
     instance-id:  ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.int}}
